@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = 'tHE qUICK bROWN fOX';
+  let UPPER = 'QWERTYUIOPLKJHGFDSAZXCVBNM';
+  let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+  let result = [];
+  for(let x=0; x<arr.length; x++)
+  {
+    // Hàm indexof bắt buộc gán !== -1
+    if(UPPER.indexOf(arr[x]) !== -1)
+    {
+      result.push(arr[x].toLowerCase());
+    }
+    else if(LOWER.indexOf(arr[x]) !== -1)
+    {
+      result.push(arr[x].toUpperCase());
+    }
+    else
+    {
+      result.push(arr[x]);
+    }
+  }
+  console.log(result.join(''));
+</script>
+</body>
+</html>
